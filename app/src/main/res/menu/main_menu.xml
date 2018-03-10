@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/action_add_task"
+        android:checkable="false"
         android:icon="@android:drawable/ic_menu_add"
+        android:iconTint="#591033"
         android:title="Add Task"
         app:showAsAction="always" />
 </menu>
