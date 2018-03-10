@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#ca073e</color>
     <color name="colorAccent">#FF4081</color>
     <color name="magenta">#5b0f34</color>
+    <color name="back">#d1d2fc</color>
+    <color name="list">#cacbf9</color>
 </resources>

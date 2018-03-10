@@ -10,8 +10,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:gravity="center_vertical"
         android:text="Hello"
-        android:textSize="20sp" />
+        android:fontFamily="@font/nanum"
+        android:textSize="40sp" />
 
     <Button
         android:id="@+id/task_delete"
@@ -20,6 +22,8 @@
         android:layout_alignParentEnd="true"
         android:onClick="deleteTask"
         android:layout_alignParentRight="true"
+        android:fontFamily="@font/nanum"
+        android:textSize="30sp"
         android:text="Done" />
 
 </RelativeLayout>
