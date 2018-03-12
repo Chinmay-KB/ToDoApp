@@ -9,7 +9,7 @@
     <android.support.v7.widget.CardView
         android:id="@+id/card_view"
         android:layout_width="fill_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="0dp"
         card_view:cardCornerRadius="5dp"
@@ -17,12 +17,12 @@
         >
     <TextView
         android:id="@+id/task_title"
-        android:layout_width="wrap_content"
+        android:layout_width="250sp"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:gravity="center_vertical"
-        android:text="Hello"
+        android:text="Hello!"
         android:fontFamily="@font/nanum"
         android:textSize="30sp" />
     </android.support.v7.widget.CardView>
@@ -33,8 +33,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/card_view"
-        android:layout_marginTop="19sp"
+        android:layout_marginTop="5sp"
         android:background="#89cff0"
+        android:layout_alignParentRight="true"
         android:theme="@style/FlatButtonStyle"
         android:fontFamily="@font/nanum"
         android:onClick="deleteTask"
