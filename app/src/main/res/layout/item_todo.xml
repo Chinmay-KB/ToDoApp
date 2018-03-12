@@ -11,13 +11,14 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="0dp"
-        card_view:cardCornerRadius="5dp"
+        android:layout_margin="2dp"
+        card_view:cardCornerRadius="7dp"
         card_view:contentPadding="10dp"
+        card_view:cardElevation="7sp"
         >
     <TextView
         android:id="@+id/task_title"
-        android:layout_width="250sp"
+        android:layout_width="270sp"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -25,26 +26,27 @@
         android:text="Hello!"
         android:fontFamily="@font/nanum"
         android:textSize="30sp" />
+        <Button
+            android:id="@+id/task_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/card_view"
+            android:background="@drawable/round_button"
+            android:layout_alignParentRight="true"
+
+            android:fontFamily="@font/nanum"
+            android:onClick="deleteTask"
+            android:text="Done"
+            android:hapticFeedbackEnabled="true"
+            android:textAppearance="@style/FlatButtonStyle"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_marginLeft="300sp"
+            android:elevation="7sp"
+            />
     </android.support.v7.widget.CardView>
 
-    <Button
-        android:id="@+id/task_delete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/card_view"
-        android:layout_marginTop="5sp"
-        android:background="#89cff0"
-        android:layout_alignParentRight="true"
-        android:theme="@style/FlatButtonStyle"
-        android:fontFamily="@font/nanum"
-        android:onClick="deleteTask"
-        android:text="Done"
-        android:hapticFeedbackEnabled="true"
-        android:textAppearance="@style/FlatButtonStyle"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        />
 
 
 
