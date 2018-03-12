@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_vertical">
 
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_margin="0dp"
+        card_view:cardCornerRadius="5dp"
+        card_view:contentPadding="10dp"
+        >
     <TextView
         android:id="@+id/task_title"
         android:layout_width="wrap_content"
@@ -13,17 +24,27 @@
         android:gravity="center_vertical"
         android:text="Hello"
         android:fontFamily="@font/nanum"
-        android:textSize="40sp" />
+        android:textSize="30sp" />
+    </android.support.v7.widget.CardView>
 
     <Button
         android:id="@+id/task_delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:onClick="deleteTask"
-        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/card_view"
+        android:layout_marginTop="19sp"
+        android:background="#89cff0"
+        android:theme="@style/FlatButtonStyle"
         android:fontFamily="@font/nanum"
-        android:textSize="30sp"
-        android:text="Done" />
+        android:onClick="deleteTask"
+        android:text="Done"
+        android:hapticFeedbackEnabled="true"
+        android:textAppearance="@style/FlatButtonStyle"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        />
+
+
 
 </RelativeLayout>

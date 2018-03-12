@@ -14,6 +14,11 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.os.Bundle;
 
 import java.util.ArrayList;
 
@@ -25,13 +30,17 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     private TaskDbHelper mHelper;
     private ListView mTaskListView;
+    private Toolbar mToolbar;
     private ArrayAdapter<String> mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
 
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         mHelper = new TaskDbHelper(this);
         mTaskListView = (ListView) findViewById(R.id.list_todo);
 
