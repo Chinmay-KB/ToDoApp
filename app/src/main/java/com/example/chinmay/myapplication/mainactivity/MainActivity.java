@@ -1,7 +1,8 @@
-package com.example.chinmay.myapplication;
+package com.example.chinmay.myapplication.mainactivity;
 
 import android.content.ContentValues;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -11,20 +12,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.os.Bundle;
 
 import java.util.ArrayList;
 
 
+import com.example.chinmay.myapplication.R;
 import com.example.chinmay.myapplication.db.TaskContract;
 import com.example.chinmay.myapplication.db.TaskDbHelper;
+import com.example.chinmay.myapplication.db.pop;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private ListView mTaskListView;
     private Toolbar mToolbar;
     private ArrayAdapter<String> mAdapter;
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,13 @@ public class MainActivity extends AppCompatActivity {
         mTaskListView = (ListView) findViewById(R.id.list_todo);
 
         updateUI();
+
+         // Floating action button implemented here
+    }
+    //@Override
+    public void onClick(View view) {
+        Intent khelali=new Intent(MainActivity.this,pop.class); // Use onClick rather than onClickListener
+        startActivity(khelali);
     }
 
     @Override
@@ -57,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_add_task:
-                final EditText taskEditText = new EditText(this);
+               final EditText taskEditText = new EditText(this);
                 AlertDialog dialog = new AlertDialog.Builder(this)
                         .setTitle("Add a new task")
                         .setMessage("What do you want to do next?")
@@ -81,7 +89,6 @@ public class MainActivity extends AppCompatActivity {
                         .create();
                 dialog.show();
                 return true;
-
             default:
                 return super.onOptionsItemSelected(item);
         }
